@@ -1,0 +1,187 @@
+/* ==========================
+    News Page
+========================== */
+
+/* 背景画像の上にオーバーレイ */
+.news-page::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(175, 145, 105, 0.553);
+}
+
+/* ページの内容をオーバーレイより前に表示 */
+.news-page-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* 背景画像 */
+.news-page {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../images/bg/news_bg.jpg");
+}
+
+.news-list{
+    width: 80%;
+    margin: auto;
+}
+
+.news-page-title {
+    margin: 0;
+    padding-top: 150px;
+    text-align: center;
+    font-family: "Caveat", cursive;
+    font-size: 70px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: aliceblue;
+}
+
+.news-item {
+    margin-top: 25px;
+    padding: 15px 5px;
+    letter-spacing: 0.2em;
+    color: aliceblue;
+    border-radius: 20px;
+    background-color: rgba(153, 150, 152, 0.7);
+    display: flex;
+    flex-direction: column;
+}
+
+.first-group{
+    display: flex;
+    align-items: center;
+}
+
+.news-date,
+.news-item-title,
+.news-item-content {
+    font-size: 20px;
+    margin: 0;
+}
+
+.news-date {
+    width: 15%;
+}
+
+.news-item-title{
+    width: 85%;
+    font-weight: bold;
+}
+
+.news-item-content {
+    width: 80%;
+    margin: 10px 0 10px 20%;
+}
+
+.news-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 60px;
+}
+
+.news-pagination a,
+.news-pagination span {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 5px 10px;
+}
+
+.news-pagination a {
+    transition: opacity 0.3s ease;
+}
+
+.news-pagination a:hover {
+    opacity: 0.6;
+}
+
+.news-pagination .current {
+    border-bottom: 1px solid white;
+}
+
+/* ==========================
+    News Page SP
+========================== */
+
+@media (max-width:768px) {
+
+    /* 背景 */
+    .news-page {
+        height: auto;
+        min-height: 100dvh;
+        padding-bottom: 80px;
+        background-position: center;
+    }
+
+    .news-page::after {
+        background: rgba(175, 145, 105, 0.65);
+    }
+
+    /* タイトル */
+    .news-page-title {
+        padding-top: 120px;
+        font-size: 48px;
+        letter-spacing: 0.08em;
+    }
+
+    /* 一覧 */
+    .news-list {
+        width: 90%;
+    }
+
+    /* 1件分 */
+    .news-item {
+        margin-top: 20px;
+        padding: 10px 0 10px 10px;
+        border-radius: 15px;
+    }
+
+    /* 日付＋タイトル */
+    .first-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .news-date {
+        width: 100%;
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .news-item-title {
+        width: 100%;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    /* 内容 */
+    .news-item-content {
+        width: 100%;
+        margin: 15px 0 5px;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    /* ページネーション */
+    .news-pagination {
+        gap: 8px;
+        margin-top: 40px;
+    }
+
+    .news-pagination a,
+    .news-pagination span {
+        font-size: 16px;
+        padding: 5px 8px;
+    }
+}

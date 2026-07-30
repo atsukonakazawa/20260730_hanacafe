@@ -1,0 +1,259 @@
+/* ==========================
+    Each Menu Page
+========================== */
+
+/* 背景画像の上にオーバーレイ */
+.page-content::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(118, 92, 12, 0.821);
+}
+
+/* ページの内容をオーバーレイより前に表示 */
+.page-title,
+.page-body {
+    position: relative;
+    z-index: 1;
+}
+
+/* 背景画像 */
+.page-content {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.page-coffee {
+    background-image: url("../images/bg/coffee_bg.jpg");
+}
+
+.page-tea {
+    background-image: url("../images/bg/tea_bg2.jpeg");
+}
+
+.page-bakery {
+    background-image: url("../images/bg/bakery_bg.jpg");
+}
+
+.page-chocolate {
+    background-image: url("../images/bg/chocolate_bg.jpg");
+}
+
+.page-title{
+    margin: 0;
+    padding-top: 150px;
+    text-align: center;
+    font-family: "Caveat", cursive;
+    font-size: 70px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: aliceblue;
+}
+
+
+/* メニュー全体 */
+.menu-page {
+    width: 100%;
+    padding: 100px 20px 100px;
+    margin: 0;
+}
+
+/* メニュー1つ分 */
+.menu-item {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 70px;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition:
+        opacity 1.2s ease,
+        transform 1.2s ease;
+}
+
+.menu-item.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 写真を左、文字を右 */
+.menu-item-left {
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+/* 文字を左、写真を右 */
+.menu-item-right {
+    justify-content: flex-end;
+}
+
+/* 写真 */
+.menu-image {
+    width: 450px;
+    flex-shrink: 0;
+    margin: 30px;
+}
+
+.menu-image img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* メニュー情報 */
+.menu-info {
+    width: 400px;
+    letter-spacing: 0.1em;
+    color: aliceblue;
+    border-radius: 20px;
+    padding: 20px 25px;
+    background-color: rgba(153, 150, 152, 0.7);
+}
+
+.menu-info h2 {
+    font-family: "Caveat", cursive;
+    font-size: 52px;
+    font-weight: 600;
+    margin: 0 0 10px;
+}
+
+.menu-info p {
+    margin: 8px 0;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+}
+
+.menu-price {
+    margin-top: 20px !important;
+}
+
+.menu-message{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    color: aliceblue;
+    border-radius: 20px;
+    padding: 7px 15px;
+    background-color: rgba(153, 150, 152, 0.7);
+}
+
+.back-button{
+    width: 150px;
+    margin: 100px auto;
+    text-align: center;
+    color: aliceblue;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgba(153, 150, 152, 0.7);
+    cursor: pointer;
+}
+
+.back-button a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 0.08em;
+}
+
+/* ==========================
+    Each Menu Page SP
+========================== */
+
+@media (max-width:768px) {
+
+    /* 背景 */
+    .page-content {
+        background-position: center;
+        background-size: cover;
+    }
+
+    .page-content::after {
+        background: rgba(118, 92, 12, 0.65);
+    }
+
+    /* タイトル */
+    .page-title {
+        padding-top: 120px;
+        font-size: 48px;
+        letter-spacing: 0.08em;
+    }
+
+    /* メニュー全体 */
+    .menu-page {
+        padding: 60px 15px;
+    }
+
+    /* 商品1つ */
+    .menu-item {
+        width: 90%;
+        margin-bottom: 60px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* 左右配置を解除 */
+    .menu-item-left,
+    .menu-item-right {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    /* 写真 */
+    .menu-image {
+        width: 70%;
+        margin: 20px 0;
+    }
+
+    .menu-image img {
+        height: 300px;
+        object-fit: cover;
+    }
+
+    /* 説明 */
+    .menu-info {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .menu-info h2 {
+        font-size: 38px;
+        margin-bottom: 15px;
+    }
+
+    .menu-info p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .menu-price {
+        margin-top: 15px !important;
+    }
+
+    /* メッセージ */
+    .menu-message {
+        width: 85%;
+        font-size: 15px;
+        line-height: 1.8;
+        padding: 10px 15px;
+    }
+
+    /* 戻るボタン */
+    .back-button {
+        width: 130px;
+        margin: 60px auto;
+    }
+
+    .back-button a {
+        font-size: 16px;
+    }
+}

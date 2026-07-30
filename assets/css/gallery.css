@@ -1,0 +1,109 @@
+/* ==========================
+    Gallery Page
+========================== */
+
+
+.gallery-page {
+    min-height: 100vh;
+    padding: 120px 0;
+    background-image: url("../images/bg/gallery_page_bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.gallery-page-content {
+    width: 85%;
+    margin: auto;
+}
+
+.gallery-page-title {
+    text-align: center;
+    font-family: "Caveat", cursive;
+    font-size: 80px;
+    color: aliceblue;
+    margin-bottom: 70px;
+}
+
+/* 4列 */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.gallery-card {
+    background-color: rgba(153, 150, 152, 0.7);
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.gallery-card-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.gallery-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-card-title {
+    margin-top: 15px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: lighter;
+    letter-spacing: 0.1em;
+}
+
+/* ==========================
+    Gallery Page SP
+========================== */
+
+@media (max-width:768px) {
+
+    /* ページ全体 */
+    .gallery-page {
+        min-height: 100dvh;
+        padding: 100px 0 60px;
+        background-position: center;
+    }
+
+    /* 内容幅 */
+    .gallery-page-content {
+        width: 90%;
+    }
+
+    /* タイトル */
+    .gallery-page-title {
+        font-size: 48px;
+        margin-bottom: 40px;
+        letter-spacing: 0.08em;
+    }
+
+    /* 2列 */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    /* カード */
+    .gallery-card {
+        padding: 10px;
+        border-radius: 15px;
+    }
+
+    /* 写真 */
+    .gallery-card-image {
+        height: 160px;
+    }
+
+    .gallery-card-title {
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
