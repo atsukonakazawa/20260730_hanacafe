@@ -16,7 +16,7 @@
 
         <p class="logo">
             <a href="<?php echo esc_url(home_url('/')); ?>#hero">
-                <img class="logo-img" src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" alt="">
+                HanaCafe
             </a>
         </p>
 
