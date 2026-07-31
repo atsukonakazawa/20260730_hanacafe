@@ -137,13 +137,17 @@
     /* 一覧 */
     .news-list {
         width: 90%;
+        margin-top: 20px;
     }
 
     /* 1件分 */
     .news-item {
-        margin-top: 20px;
-        padding: 10px 0 10px 10px;
+        display: block;
+        width: 90%;
+        margin-top: 15px;
+        padding: 15px;
         border-radius: 15px;
+        letter-spacing: 0.08em;
     }
 
     /* 日付＋タイトル */
@@ -163,6 +167,7 @@
         width: 100%;
         font-size: 18px;
         line-height: 1.6;
+        font-weight: 700;
     }
 
     /* 内容 */

@@ -73,23 +73,16 @@ Text Domain: hanacafe
 }
 
 .logo {
-    font-family: "Caveat", cursive;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 32px;
-    margin: 0;
-    padding-left: 10px;
-    letter-spacing: 0.1em; /*　文字の間隔 */
     position: fixed;
-    top: 100px;
+    top: 80px;
     left: 60px;
     z-index: 1000;
 }
 
-.logo a {
-    color: aliceblue;
-    text-decoration: none;
+.logo a img{
+    width: 50px;
+    border-radius: 50%;
+    border: solid white 2px;
 }
 
 .menu-button {
@@ -159,7 +152,7 @@ Text Domain: hanacafe
     right: 0;
     width: 380px;
     height: 100vh;
-    background: rgba(35, 30, 25, 0.5);
+    background: rgba(35, 30, 25, 0.633);
     display: flex;
     flex-direction: column;
     padding: 40px;
@@ -189,7 +182,7 @@ Text Domain: hanacafe
     left: 50%;
     width: 36px;
     /* 線の長さ */
-    height: 1.5px;
+    height: 2px;
     /* 線の太さ */
     background: white;
     transform-origin: center;
@@ -270,6 +263,7 @@ Text Domain: hanacafe
 
     .close-button span {
         width: 30px;
+        height: 2px;
     }
 
     .side-menu>ul {
@@ -478,7 +472,7 @@ Text Domain: hanacafe
     background-image: url("assets/images/bg/concept.png");
     background-size: 96%;
     /*　画面いっぱいに表示 */
-    background-position: top;
+    background-position: center;
     /*　画像の中央を基準に表示 */
     background-repeat: no-repeat;
 }
@@ -610,6 +604,12 @@ Text Domain: hanacafe
         opacity 3s ease,
         transform 3s ease;
 }
+
+.news-text{
+    width: 96%;
+    margin: auto;
+}
+
 .news-title {
     font-family: "Caveat", cursive;
     font-optical-sizing: auto;
@@ -617,7 +617,6 @@ Text Domain: hanacafe
     font-style: normal;
     font-size: 72px;
     margin-bottom: 50px;
-    padding-left: 10px;
     letter-spacing: 0.1em;
     /*　文字の間隔 */
     color: aliceblue;
@@ -625,9 +624,9 @@ Text Domain: hanacafe
 
 .news-item {
     display: flex;
-    width: 100%;
-    margin-top: 16px;
-    padding: 15px 5px;
+    width: 90%;
+    margin: 12px auto;
+    padding: 10px 5px;
     font-size: 20px;
     letter-spacing: 0.2em;
     color: aliceblue;
@@ -685,28 +684,36 @@ Text Domain: hanacafe
         width: 85%;
     }
 
+    .news-text{
+        width: 100%;
+    }
+
     .news-title {
         font-size: 48px;
         margin-bottom: 35px;
         padding-left: 0;
-        letter-spacing: 0.08em;
     }
 
     .news-item {
         display: block;
-        width: 100%;
+        width: 90%;
         margin-top: 15px;
         padding: 15px;
         border-radius: 15px;
+        letter-spacing: 0.08em;
     }
 
     .news-date,
     .news-subtitle,
     .news-content-text {
         padding: 0;
-        margin: 8px 0;
+        margin: 4px 0;
         font-size: 15px;
         line-height: 1.5;
+    }
+
+    .news-subtitle{
+        font-weight: bold;
     }
 
     .news-more {
@@ -890,7 +897,7 @@ Text Domain: hanacafe
     /*　横方向の中央 */
     align-items: center;
     /*　縦方向の中央 */
-    background-image: url("assets/images/access.jpg");
+    background-image: url("assets/images/bg/access.jpg");
     background-size: 96%;
     /*　画面いっぱいに表示 */
     background-position: center;
@@ -930,8 +937,8 @@ Text Domain: hanacafe
     width: 80%;
     margin: auto;
     border-radius: 20px;
-    padding: 50px;
-    background-color: rgba(153, 150, 152, 0.7);
+    padding: 25px 30px;
+    background-color: rgba(153, 150, 152, 0.917);
 }
 
 .access-title {
@@ -1424,7 +1431,7 @@ Text Domain: hanacafe
     text-align: center;
     /*　文字中央揃え */
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(40px);
     transition:
         opacity 3s ease,
         transform 3s ease;
@@ -1436,15 +1443,13 @@ Text Domain: hanacafe
     font-weight: 600;
     font-style: normal;
     font-size: 72px;
-    margin-bottom: 50px;
-    padding-left: 10px;
+    margin-bottom: 30px;
     letter-spacing: 0.1em;
     /*　文字の間隔 */
     color: aliceblue;
 }
 
 .contact-subtitle {
-    margin-top: 16px;
     font-size: 20px;
     letter-spacing: 0.3em;
     color: aliceblue;
@@ -1454,23 +1459,23 @@ Text Domain: hanacafe
     width: 600px;
     max-width: 90vw;
     border-radius: 20px;
-    padding: 20px 70px;
+    padding: 15px 70px;
     background-color: rgba(153, 150, 152, 0.7);
 }
 
 .contact-form-body {
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     text-align: left;
 }
 
 .form-group label {
-    margin-bottom: 8px;
+    margin-bottom: 3px;
     color: aliceblue;
     font-size: 16px;
     letter-spacing: 0.1em;
@@ -1506,6 +1511,7 @@ Text Domain: hanacafe
     letter-spacing: 0.15em;
     cursor: pointer;
     background: rgba(255,255,255,0.85);
+    color: #5b5858;
 }
 
 .contact-submit:hover {
@@ -1536,6 +1542,7 @@ Text Domain: hanacafe
     color: white;
     font-size: 27px;
     letter-spacing: 0.15em;
+    margin: 10px 0;
 }
 
 /* ==========================

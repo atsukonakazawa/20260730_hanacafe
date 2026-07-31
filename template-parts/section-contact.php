@@ -29,7 +29,7 @@
                     <label for="message">
                         お問い合わせ内容
                     </label>
-                    <textarea id="message" name="message" rows="5" placeholder="お問い合わせ内容を入力してください" required></textarea>
+                    <textarea id="message" name="message" rows="4" placeholder="お問い合わせ内容を入力してください" required></textarea>
                 </div>
                 <button type="submit" class="contact-submit">
                     送信

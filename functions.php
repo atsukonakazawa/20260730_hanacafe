@@ -22,7 +22,7 @@ function hanacafe_enqueue_styles()
     if (is_page(['coffee', 'tea', 'bakery', 'chocolate'])) {
         wp_enqueue_style(
             'hanacafe-menu-page',
-            get_template_directory_uri() . '/assets/css/menu-page.css'
+            get_template_directory_uri() . '/assets/css/menu.css'
         );
     }
 

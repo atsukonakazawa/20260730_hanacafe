@@ -188,12 +188,14 @@
 
     /* メニュー全体 */
     .menu-page {
-        padding: 60px 15px;
+        width: 95%;
+        margin: auto;
+        padding: 50px 0 30px;
     }
 
     /* 商品1つ */
     .menu-item {
-        width: 90%;
+        width: 100%;
         margin-bottom: 60px;
         display: flex;
         flex-direction: column;
@@ -219,7 +221,7 @@
 
     /* 説明 */
     .menu-info {
-        width: 100%;
+        width: 90%;
         box-sizing: border-box;
         padding: 20px;
         border-radius: 15px;
